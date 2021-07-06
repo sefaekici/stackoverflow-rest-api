@@ -1,7 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const auth = require("./routers/auth");
-const questions = require("./routers/questions");
+const routers = require("./routers/index");
 
 //Environment Variables
 dotenv.config({
@@ -11,9 +10,7 @@ dotenv.config({
 const app = express();
 
 //localhost:5000/api
-app.use("api/questions", questions);
-app.use("api/auth", auth);
-
+app.use("/api", routers);
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => console.log(`Server started on PORT:${PORT}`));
