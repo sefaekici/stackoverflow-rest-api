@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const routers = require("./routers/index");
+const connectDatabase = require("./helpers/database/connectDatabase");
 
 //Environment Variables
 dotenv.config({
@@ -8,6 +9,7 @@ dotenv.config({
 });
 
 const app = express();
+connectDatabase();
 
 //localhost:5000/api
 app.use("/api", routers);
