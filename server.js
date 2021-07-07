@@ -9,6 +9,7 @@ dotenv.config({
 });
 
 const app = express();
+//Connect To MongoDb Database
 connectDatabase();
 
 //localhost:5000/api
