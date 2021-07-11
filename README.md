@@ -1,4 +1,4 @@
-This project is still being develop.
+This project is still being developed.
 
 
 # Getting Started
